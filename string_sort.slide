@@ -1,0 +1,56 @@
+* String Sorter
+
+.play -edit string_sort.go /^func main/,/^}/
+
+* String Sorter
+
+.play -edit string_sort.go /^func main/,/^}/
+
+  // strings
+  func Split(s, sep string) []string
+  func Join(a []string, sep string) string
+  func Map(mapping func(rune) rune, s string) string
+
+  // sort
+  func Sort(data Interface)
+
+* String Sorter
+
+.play -edit string_sort.go /^func main/,/^}/ HLMap
+.code string_sort.go /^func dropPunctuation/,/^}/
+
+* String Sorter
+
+.play -edit string_sort.go /^func main/,/^}/ HLSort
+
+* String Sorter
+
+  func Sort(data Interface)
+
+Sort sorts data.  It makes one call to data.Len to determine n, and O(n*log(n)) calls to data.Less and data.Swap. The sort is not guaranteed to be stable.
+
+* String Sorter
+
+  type Interface interface {
+      // Len is the number of elements in the collection.
+      Len() int
+      // Less reports whether the element with
+      // index i should sort before the element with index j.
+      Less(i, j int) bool
+      // Swap swaps the elements with indexes i and j.
+      Swap(i, j int)
+  }
+
+A type, typically a collection, that satisfies sort.Interface can be
+sorted by the routines in this package.  The methods require that the
+elements of the collection be enumerated by an integer index.
+
+* String Sorter
+
+.code string_sort.go /^type/,/^}/
+.code string_sort.go /^func firstIsUpper/,/^}/
+
+* String Sorter
+
+.play -edit string_sort.go /^func main/,/^}/
+

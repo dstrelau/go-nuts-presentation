@@ -1,0 +1,124 @@
+Go? Nuts!
+
+* Golang
+
+- compiled
+- static typing
+- garbage collected
+- pointers
+- composition not inheritance
+- no generics
+- no exceptions
+- concurrency as default
+- coroutines/channels
+
+* Hello, World
+
+.play -edit hello.go
+
+  $ go run hello.go
+  Hello, Trunk Club
+
+  $ go build -o hello hello.go
+
+  $ file hello
+  hello: Mach-O 64-bit executable x86_64
+
+  $ ./hello
+  Hello, Trunk Club
+
+* Basics
+
+.play -edit basics.go /^import/,
+
+* Pointers
+
+.play -edit pointers.go /^func/,
+
+* Slices
+
+.play -edit slice.go /^func/,
+
+* for
+
+.play -edit for.go /^func/,
+
+* JSON
+
+* JSON
+
+.code json.go /var theFruit/,/^}/
+.code json.go /^type/,/^}/
+
+* JSON
+
+.play -edit json.go /^func main/,
+
+* Shapes
+
+* Shapes
+
+.code shapes.go /^type/,/END TYPES/
+.code shapes.go /^type shape/,/^}/
+
+* Shapes
+
+.play -edit shapes.go /^func main/,/^}/
+
+* Concurrency (is not parallelism)
+
+* Channels
+
+.play -edit channels.go
+
+* Goroutines
+
+.play -edit goroutines.go /^func/,
+
+* select
+
+.code select.go /^func fill/,/^}/
+
+* select
+
+.play -edit select.go /^func main/,
+
+* Why Go?
+
+* Less is More
+
+- Small (syntax & concepts)
+- Explicit > Terse
+- v1 frozen
+
+* Great stdlib
+
+- flags
+- io & bufio
+- encoding/json
+- unicode/utf8
+- net/http (HTTP/2)
+- testing & testing/quick
+- image/gif
+
+* Great Tools
+
+- go fmt
+- go vet
+- go get
+- go test -race
+- present
+
+* Orthogonal to Ruby
+
+- Statically Typed
+- Compiled
+- Concurrency
+
+* Go Elsewhere
+
+- Hashicorp (cross-compile)
+- Docker
+- InfluxDB
+- Shopify
+- Medium (+Neo4j)

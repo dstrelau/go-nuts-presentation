@@ -1,0 +1,210 @@
+Go? Nuts!
+
+# * Dough...nuts
+# .image donuts.gif
+
+
+
+* Golang
+
+- compiled
+- static typing
+- garbage collected
+- pointers
+- composition not inheritance
+- no generics
+- no exceptions
+- concurrency as default
+- coroutines/channels
+
+
+
+* Hello, World
+
+.play -edit hello.go
+
+  $ go run hello.go
+  Hello, Trunk Club
+
+  $ go build -o hello hello.go
+
+  $ file hello
+  hello: Mach-O 64-bit executable x86_64
+
+  $ ./hello
+  Hello, Trunk Club
+
+* Basics
+
+.play -edit basics.go /^import/,
+
+* Pointers
+
+.play -edit pointers.go /^func/,
+
+* Slices
+
+.play -edit slice.go /^func/,
+
+* for
+
+.play -edit for.go /^func/,
+
+* JSON
+
+* JSON
+
+.code json.go /var theFruit/,/^}/
+.code json.go /^type/,/^}/
+
+* JSON
+
+.play -edit json.go /^func main/,
+
+
+
+* Shapes
+
+* Shapes
+
+.code shapes.go /^type/,/END TYPES/
+.code shapes.go /^type shape/,/^}/
+
+* Shapes
+
+.play -edit shapes.go /^func main/,/^}/
+
+
+
+# * FizzBuzz
+#
+# * FizzBuzz
+# .code fizzbuzz.go /^type fizz/,/^}/
+#
+# * FizzBuzz
+# .play -edit fizzbuzz.go /^const/,/^}/
+#
+# * FizzBuzz
+# .code fizzbuzz.go /String/,/^}/
+#
+# * FizzBuzz
+#    // Stringer is implemented by any value that has a String method,
+#    // which defines the ``native'' format for that value.
+#    // The String method is used to print values passed as an operand
+#    // to any format that accepts a string or to an unformatted printer
+#    // such as Print.
+#
+#    type Stringer interface {
+#      String() string
+#    }
+#
+# [[https://golang.org/pkg/fmt/#Stringer]]
+
+
+
+* Concurrency (is not parallelism)
+
+
+
+* Channels
+.play -edit channels.go
+
+
+
+* Goroutines
+.play -edit goroutines.go /^func/,
+
+
+
+* select
+.code select.go /^func fill/,/^}/
+
+* select
+.play -edit select.go /^func main/,
+
+
+# * String Sorter
+# .play -edit string_sort.go /^func main/,/^}/
+#
+# * String Sorter
+# .play -edit string_sort.go /^func main/,/^}/
+#
+#   // strings
+#   func Split(s, sep string) []string
+#   func Join(a []string, sep string) string
+#   func Map(mapping func(rune) rune, s string) string
+#
+#   // sort
+#   func Sort(data Interface)
+#
+# * String Sorter
+# .play -edit string_sort.go /^func main/,/^}/ HLMap
+# .code string_sort.go /^func dropPunctuation/,/^}/
+#
+# * String Sorter
+# .play -edit string_sort.go /^func main/,/^}/ HLSort
+#
+# * String Sorter
+#
+#   func Sort(data Interface)
+#
+# Sort sorts data.  It makes one call to data.Len to determine n, and O(n*log(n)) calls to data.Less and data.Swap. The sort is not guaranteed to be stable.
+#
+# * String Sorter
+#
+#   type Interface interface {
+#       // Len is the number of elements in the collection.
+#       Len() int
+#       // Less reports whether the element with
+#       // index i should sort before the element with index j.
+#       Less(i, j int) bool
+#       // Swap swaps the elements with indexes i and j.
+#       Swap(i, j int)
+#   }
+#
+# A type, typically a collection, that satisfies sort.Interface can be
+# sorted by the routines in this package.  The methods require that the
+# elements of the collection be enumerated by an integer index.
+#
+# * String Sorter
+# .code string_sort.go /^type/,/^}/
+# .code string_sort.go /^func firstIsUpper/,/^}/
+#
+# * String Sorter
+# .play -edit string_sort.go /^func main/,/^}/
+
+
+
+* Why Go?
+
+* Less is More
+- Small (syntax & concepts)
+- Explicit > Terse
+- v1 frozen
+
+* Great stdlib
+
+- flags
+- io & bufio
+- encoding/json
+- unicode/utf8
+- net/http (HTTP/2)
+- testing & testing/quick
+- image/gif
+
+* Great Tools
+- go fmt
+- go vet
+- go get
+- go test -race
+- present
+
+* Orthogonal to Ruby
+- Statically Typed
+- Compiled
+- Concurrency
+
+* Using Go
+- Hashicorp
+- CLI tools
+
