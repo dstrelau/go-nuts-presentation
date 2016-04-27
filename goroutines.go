@@ -13,7 +13,7 @@ func receive(c chan int) {
 }
 
 func main() {
-	queue := make(chan int, 5)
+	queue := make(chan int) // unbuffered
 
 	receive(queue)
 
